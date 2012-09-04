@@ -18,6 +18,8 @@ class RemoteReceiver{
  private:
 #endif
    static void interrupt();
+
+ private:
    static volatile uint8_t ready;
    static volatile uint32_t data;
 };
