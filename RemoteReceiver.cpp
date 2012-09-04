@@ -5,10 +5,17 @@
 volatile uint8_t RemoteReceiver::ready;
 volatile uint32_t RemoteReceiver::data;
 
-void RemoteReceiver::start(uint8_t intr){
+#if REMOTE_RECEIVER_USE_ATTACH_INTERRUPT
+void RemoteReceiver::start(uint8_t intr)
+#else
+void RemoteReceiver::start()
+#endif
+{
   ready = 0;
   data = 0;
+#if REMOTE_RECEIVER_USE_ATTACH_INTERRUPT
   attachInterrupt(intr, &RemoteReceiver::interrupt, CHANGE);
+#endif
 }
 
 uint8_t RemoteReceiver::dataReady(){
