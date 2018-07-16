@@ -5,15 +5,15 @@
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
-RemoteReceiver KEYWORD1
+RemoteReceiver	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-start KEYWORD2
-dataReady KEYWORD2
-getData KEYWORD2
+start	KEYWORD2
+dataReady	KEYWORD2
+getData	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
